@@ -16,7 +16,7 @@ const location=search.value
 const randomNo = Math.floor(Math.random()*10)
 
 msg1.textContent="Loading..."
-fetch('http://localhost:3000/weather?search='+location).then((response)=>{
+fetch('/weather?search='+location).then((response)=>{
     response.json().then((data)=>{
         console.log(data.error);
         if(data.error)
